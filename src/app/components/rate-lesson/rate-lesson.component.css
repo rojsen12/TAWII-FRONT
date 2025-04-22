@@ -22,13 +22,13 @@
 }
 
 .rating-stars span::before {
-  content: "\2605"; /* Unicode dla gwiazdki */
+  content: "\2605";
   font-size: 2em;
   color: #ccc;
 }
 
 .rating-stars span.filled::before {
-  color: #f39c12; /* Złota gwiazdka */
+  color: #f39c12;
 }
 
 

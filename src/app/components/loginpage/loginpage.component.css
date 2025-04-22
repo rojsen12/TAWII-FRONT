@@ -43,7 +43,6 @@ p {
     margin-top: 15px;
 }
 
-/* Stylizacja formularza logowania */
 .login-container, .register-container {
     max-width: 400px;
     margin: 20px auto;

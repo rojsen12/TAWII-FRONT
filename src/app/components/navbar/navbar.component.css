@@ -1,26 +1,26 @@
 .navbar-custom {
-  background-color: white; /* Tło białe */
-  border-bottom: 2px solid lightgreen; /* Zielona linia u dołu */
-  padding: 10px 20px; /* Padding wewnętrzny */
+  background-color: white;
+  border-bottom: 2px solid lightgreen;
+  padding: 10px 20px;
 }
 
 .navbar-content {
-  display: flex; /* Umożliwia układ w linii */
-  justify-content: space-between; /* Rozkłada elementy na całej szerokości */
-  align-items: center; /* Wyśrodkowanie w pionie */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-brand {
-  font-size: 1.5em; /* Powiększenie rozmiaru czcionki dla tytułu */
-  color: green; /* Zielony kolor tekstu */
-  text-decoration: none; /* Usunięcie podkreślenia */
+  font-size: 1.5em;
+  color: green;
+  text-decoration: none;
 }
 
 .navbar-nav {
-  list-style: none; /* Usunięcie punktów z listy */
-  padding: 0; /* Usunięcie paddingu */
-  margin: 0; /* Usunięcie marginesu */
-  display: flex; /* Umożliwia układ w linii */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 .nav-item {
