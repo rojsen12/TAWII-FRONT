@@ -1,0 +1,15 @@
+<add-notice (noticeAdded)="onNoticeAdded()"></add-notice>
+
+<div *ngIf="loading">Ładowanie ogłoszeń...</div>
+
+<div *ngIf="error">{{ error }}</div>
+
+<div *ngFor="let item of (items$ | async); trackBy: trackById">
+  <notice-item
+    [title]="item.title"
+    [text]="item.text"
+    [image]="item.image"
+    [author]="item.author"
+    [date]="item.date">
+  </notice-item>
+</div>

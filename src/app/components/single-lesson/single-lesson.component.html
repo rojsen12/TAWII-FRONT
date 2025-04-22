@@ -1,0 +1,11 @@
+<div class="lesson-detail-container">
+  <button class="back-button" (click)="this.goBack()">Wróć</button>
+
+  <h1>{{ this.lesson?.title }}</h1>
+  <div class="lesson-image-container">
+    <img class="lesson-image" *ngIf="lesson?.image" [src]="this.lesson?.image" alt="Lesson Image" />
+  </div>
+  <p>{{ this.lesson?.content }}</p>
+</div>
+
+<rate-lesson></rate-lesson>

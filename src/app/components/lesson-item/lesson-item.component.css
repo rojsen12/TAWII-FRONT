@@ -1,0 +1,66 @@
+.lesson-item {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: fit-content;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.lesson-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.lesson-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.lesson-title {
+  font-size: 2.4em;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.lesson-date {
+  font-size: 1.2em;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.lesson-author {
+  font-size: 1.1em;
+  color: #555;
+  margin-top: 8px;
+}
+
+.lesson-text {
+  margin-top: 20px;
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.lesson-image-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.lesson-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 6px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}

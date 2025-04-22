@@ -1,0 +1,14 @@
+<div class="rate-lesson-container">
+  <h2>Oceń tę lekcję</h2>
+
+  <div class="rating-stars">
+    <span *ngFor="let star of [1, 2, 3, 4, 5]"
+          [class.filled]="star <= rating"
+          (click)="setRating(star)">
+    </span>
+  </div>
+
+  <p *ngIf="rating > 0">Twoja ocena: {{ rating }}</p>
+
+  <button (click)="submitRating()" [disabled]="rating === 0">Zatwierdź ocenę</button>
+</div>

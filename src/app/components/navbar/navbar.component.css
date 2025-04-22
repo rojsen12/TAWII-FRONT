@@ -1,0 +1,39 @@
+.navbar-custom {
+  background-color: white; /* Tło białe */
+  border-bottom: 2px solid lightgreen; /* Zielona linia u dołu */
+  padding: 10px 20px; /* Padding wewnętrzny */
+}
+
+.navbar-content {
+  display: flex; /* Umożliwia układ w linii */
+  justify-content: space-between; /* Rozkłada elementy na całej szerokości */
+  align-items: center; /* Wyśrodkowanie w pionie */
+}
+
+.navbar-brand {
+  font-size: 1.5em; /* Powiększenie rozmiaru czcionki dla tytułu */
+  color: green; /* Zielony kolor tekstu */
+  text-decoration: none; /* Usunięcie podkreślenia */
+}
+
+.navbar-nav {
+  list-style: none; /* Usunięcie punktów z listy */
+  padding: 0; /* Usunięcie paddingu */
+  margin: 0; /* Usunięcie marginesu */
+  display: flex; /* Umożliwia układ w linii */
+}
+
+.nav-item {
+  margin-left: 20px; /* Odstęp między elementami */
+}
+
+.nav-link {
+  color: green; /* Zielony kolor tekstu */
+  text-decoration: none; /* Usunięcie podkreślenia */
+  font-size: 1em; /* Rozmiar czcionki */
+}
+
+.nav-link:hover {
+  color: #061f03;
+  cursor: pointer;
+}

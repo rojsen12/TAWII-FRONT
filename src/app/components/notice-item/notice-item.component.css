@@ -1,0 +1,50 @@
+.notice-item {
+  display: flex;
+  width: 80%;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s;
+}
+
+.notice-item:hover {
+  transform: scale(1.05);
+}
+
+.notice-content {
+  flex: 1;
+  padding-right: 15px;
+}
+
+.notice-title {
+  font-size: 2em;
+  margin: 5px 0;
+}
+
+.notice-date {
+  font-size: 1.1em;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.notice-author {
+  font-size: 1em;
+  color: #555;
+  margin-top: 5px;
+}
+
+.notice-text {
+  margin-top: -15px;
+  margin-bottom: 0;
+  text-align: justify;
+  font-size: 1.1em;
+}
+
+.notice-image {
+  width: 150px;
+  height: auto;
+  border-radius: 4px;
+}

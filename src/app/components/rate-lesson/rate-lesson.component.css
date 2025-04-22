@@ -1,0 +1,55 @@
+.rate-lesson-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rating-stars {
+  font-size: 2em;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.rating-stars span {
+  position: relative;
+  display: inline-block;
+}
+
+.rating-stars span::before {
+  content: "\2605"; /* Unicode dla gwiazdki */
+  font-size: 2em;
+  color: #ccc;
+}
+
+.rating-stars span.filled::before {
+  color: #f39c12; /* Złota gwiazdka */
+}
+
+
+
+button {
+  background-color: #74c69d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #66bb6a;
+}

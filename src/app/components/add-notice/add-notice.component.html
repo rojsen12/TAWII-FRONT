@@ -1,0 +1,23 @@
+<button (click)="toggleForm()" [disabled]="!(isTokenPresent$ | async)">
+ Dodaj ogłoszenie
+</button>
+
+<div *ngIf="showForm" class="form-container">
+  <form [formGroup]="noticeForm" (ngSubmit)="onSubmit()">
+    <label for="title">Tytuł</label>
+    <input id="title" formControlName="title" type="text" required />
+
+    <label for="text">Treść</label>
+    <textarea id="text" formControlName="text" required></textarea>
+
+    <label for="image">Obrazek</label>
+    <input id="image" formControlName="image" type="text" required />
+
+    <button (click)="toggleForm()" style="margin: 10px 0;">
+      Ukryj formularz
+    </button>
+    <button type="submit" [disabled]="noticeForm.invalid">Dodaj ogłoszenie</button>
+  </form>
+
+
+</div>

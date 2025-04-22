@@ -1,0 +1,48 @@
+<add-lesson (lessonAdded)="onLessonAdded()"></add-lesson>
+
+<div *ngIf="loading">Ładowanie lekcji...</div>
+<div *ngIf="error">{{ error }}</div>
+
+<div class="subjects-container">
+  <div class="subject-column" *ngIf="(mathLessons$ | async)">
+    <h2>Matematyka</h2>
+    <div *ngFor="let item of (mathLessons$ | async); trackBy: trackById">
+      <lesson-item
+        [author]="item.author"
+        [content]="item.content"
+        [image]="item.image"
+        [title]="item.title"
+        [date]="item.created"
+        [id]="item._id">
+      </lesson-item>
+    </div>
+  </div>
+
+  <div class="subject-column" *ngIf="(polishLessons$ | async)">
+    <h2>Polski</h2>
+    <div *ngFor="let item of (polishLessons$ | async); trackBy: trackById">
+      <lesson-item
+        [author]="item.author"
+        [content]="item.content"
+        [image]="item.image"
+        [title]="item.title"
+        [date]="item.created"
+        [id]="item._id">
+      </lesson-item>
+    </div>
+  </div>
+
+  <div class="subject-column" *ngIf="(englishLessons$ | async)">
+    <h2>Angielski</h2>
+    <div *ngFor="let item of (englishLessons$ | async); trackBy: trackById">
+      <lesson-item
+        [author]="item.author"
+        [content]="item.content"
+        [image]="item.image"
+        [title]="item.title"
+        [date]="item.created"
+        [id]="item._id">
+      </lesson-item>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+::ng-deep body{
+    margin:0 !important;
+    min-height: 100vh;
+}

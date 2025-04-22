@@ -1,0 +1,11 @@
+<a [routerLink]="['/lesson/', id]">
+<div class="lesson-item">
+  <div class="lesson-content">
+    <h2 class="lesson-title">{{ title }}</h2>
+    <small class="lesson-date">{{ date | dateFormat }}</small>
+    <h3 class="lesson-author">{{ author }}</h3>
+    <p class="lesson-text">{{ content | shortenText: 100 }}</p>
+  </div>
+
+</div>
+</a>

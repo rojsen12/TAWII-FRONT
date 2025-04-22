@@ -1,0 +1,54 @@
+<div class="login-container" *ngIf="isLoginFormVisible">
+    <h2>Logowanie</h2>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <div class="input-group">
+            <label for="login-username">Nazwa Użytkownika</label>
+            <input type="text" id="login-username" name="username" [(ngModel)]="username" required
+                   placeholder="Podaj login..."
+                   #usernameInput="ngModel" [ngClass]="{'invalid': usernameInput.touched && usernameInput.invalid}" />
+            <small class="error" *ngIf="usernameInput.touched && usernameInput.invalid">To pole jest wymagane.</small>
+        </div>
+
+        <div class="input-group">
+            <label for="login-password">Hasło</label>
+            <input type="password" id="login-password" name="password" [(ngModel)]="password" required
+                   placeholder="Podaj hasło..."
+                   #passwordInput="ngModel" [ngClass]="{'invalid': passwordInput.touched && passwordInput.invalid}" />
+            <small class="error" *ngIf="passwordInput.touched && passwordInput.invalid">To pole jest wymagane.</small>
+        </div>
+        <button type="submit" [disabled]="!loginForm.form.valid">Zaloguj się</button>
+    </form>
+
+    <p>Nie posiadasz konta? Zarejestruj się tutaj! <button (click)="toggleForm()">Zarejestruj się</button></p>
+</div>
+
+<div class="register-container" *ngIf="!isLoginFormVisible">
+    <h2>Rejestracja</h2>
+    <form (ngSubmit)="onSubmitRegister()" #registerForm="ngForm">
+        <div class="input-group">
+            <label for="register-username">Nazwa Użytkownika</label>
+            <input type="text" id="register-username" name="username" placeholder="Podaj login..." [(ngModel)]="registerUsername" required
+                   #usernameInput="ngModel" [ngClass]="{'invalid': usernameInput.touched && usernameInput.invalid}" />
+            <small class="error" *ngIf="usernameInput.touched && usernameInput.invalid">To pole jest wymagane.</small>
+        </div>
+
+        <div class="input-group">
+            <label for="register-email">Email</label>
+            <input type="email" id="register-email" name="email" placeholder="np. mail@gmail.com" [(ngModel)]="registerEmail" required
+                   #emailInput="ngModel" [ngClass]="{'invalid': emailInput.touched && emailInput.invalid}" />
+            <small class="error" *ngIf="emailInput.touched && emailInput.invalid">To pole jest wymagane.</small>
+        </div>
+
+        <div class="input-group">
+            <label for="register-password">Hasło</label>
+            <input type="password" id="register-password" name="password" placeholder="Podaj hasło..." [(ngModel)]="registerPassword" required
+                   #passwordInput="ngModel" [ngClass]="{'invalid': passwordInput.touched && passwordInput.invalid}" />
+            <small class="error" *ngIf="passwordInput.touched && passwordInput.invalid">To pole jest wymagane.</small>
+        </div>
+
+        <button type="submit" [disabled]="!registerForm.form.valid">Zarejestruj się</button>
+    </form>
+
+
+    <p>Posiadasz już konto? Zaloguj się <button (click)="toggleForm()">Zaloguj się</button></p>
+</div>

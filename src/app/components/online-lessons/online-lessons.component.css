@@ -1,0 +1,40 @@
+.subjects-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.subject-column {
+  flex: 1 1 calc(25% - 20px);
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.lesson-item {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+  .subject-column {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .subjects-container {
+    flex-direction: column;
+  }
+
+  .subject-column {
+    flex: 1 1 100%;
+  }
+}
